@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Assignment 1</title>
+    <link href="css/themes/default/jquery.mobile-1.1.1.css" rel="stylesheet" type="text/css" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+
+    <!-- JavaScript HTML requirements -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/jquery.mobile-1.1.1.min.js" type="text/javascript"></script>
+    <script src="js/geo.js" type="text/javascript"></script>
+    <script src="js/review_from.js" type="text/javascript"></script>
+</head>
+<body>
+		<!-------------------Page 1 for Home---------- -->
+		<div data-role="page" id="HDhome">
+			<header data-role="header" data-position="fixed">
+				<h1>HD Feedback A1</h1>
+			</header>
+			<div data-role="navbar">
+				<ul>
+				<li><a href="#HDhome" data-icon="home" data-theme="b" class="ui-btn-active">Home</a></li>
+				<li><a href="#HDadd" data-icon="plus">Add</a></li>
+				<li><a href="#HDreview" data-icon="grid">Reviews</a></li>
+				<li><a href="#HDsettings" data-icon="gear">Settings</a></li>
+				</ul>
+			</div>
+		<div data-role="content">
+			<h2><b>Hasnen Dawoodji Feedback A1 App</b></h2>
+			<img src="Pictures-icon.png" />
+			<p>Please feel free to contact me if you have any suggestions</p>
+			<a href="tel:2269780786" data-role="button" data-icon="plus">call 226.978.0786</a>
+			<a href="mailto:hdawoodji-cc@conestogac.on.ca" data-role="button" data-icon="plus">hdawoodji-cc@conestogac.on.ca</a>
+			<p>LinkedIn:</p>
+			
+			<a href="http://ca.linkedin.com/pub/hasnen-dawoodji/16/576/b75" data-role="button" data-icon="plus" target="_blank">Hasnen Dawoodji CC</a>
+		</div>	
+			<footer data-role="footer" data-position="fixed" data-fullscreen="true">
+				<p align="center">
+					&copy; 2014
+				</p>
+			</footer>
+		</div>
+		
+		
+		
+		<!-------------------Page 2 for Add---------- -->
+		<div data-role="page" id="HDadd">
+			<header data-role="header" data-position="fixed">
+				<h1>Add Feedback</h1>	
+			</header>
+			<div data-role="navbar">
+				<ul>
+				<li><a href="#HDhome" data-icon="home">Home</a></li>
+				<li><a href="#HDadd" data-icon="plus" data-theme="b" class="ui-btn-active">Add</a></li>
+				<li><a href="#HDreview" data-icon="grid">Reviews</a></li>
+				<li><a href="#HDsettings" data-icon="gear">Settings</a></li>
+				</ul>
+			</div>
+		<div data-role="content" >
+			
+			<form id="addForm" data-ajax="false">
+				<label for="business_name">Business Name:</label>
+				<input type="text" name="business_name" id="business_name" data-mini="true" />
+				<label for="reviewer_email">Reviewer Email:</label>
+				<input type="text" name="reviewer_mail" id="reviewer_mail" data-mini="true" />
+				<label for="reviewer_comments">Reviewer Comments:</label>
+				<textarea name="reviewer_comments" id="reviewer_comments" data-mini="true"></textarea>
+				<label for="rating">Overall Rating (1-100)</label>	
+					<input type="number" pattern="[0-100]" />
+				<input data-theme="b" data-inline="true" id="save_button" type="submit" name="save" value="save" />
+			</form>
+		</div>	
+			<footer data-role="footer" data-position="fixed" data-fullscreen="true">
+				<p align="center">
+					&copy; 2014
+				</p>
+			</footer>
+		</div>
+		
+		
+		
+		<!-------------------Page 3 List of Reviews---------- -->
+		<div data-role="page" id="HDreview">
+			<header data-role="header" data-position="fixed">
+				<h1>List of Reviews</h1>
+			</header>
+			<div data-role="navbar">
+				<ul>
+				<li><a href="#HDhome" data-icon="home">Home</a></li>
+				<li><a href="#HDadd" data-icon="plus">Add</a></li>
+				<li><a href="#HDreview" data-icon="grid" data-theme="b" class="ui-btn-active">Reviews</a></li>
+				<li><a href="#HDsettings" data-icon="gear">Settings</a></li>
+				</ul>
+			</div>
+		<div data-role="content" >
+				<ul data-role="listview" id+="HD_feedback_list">
+					<li>
+						<a href="#HD_edit_review_list">
+							<h3>Business Name: Hash Software Inc</h3>
+							<p>Reviewer email: hdawoodji-cc@conestogac.on.ca</p>
+							<p>Comments: Good software</p>
+							<p>Overall Rating: 100%</p>	
+						</a>
+					</li>
+					<li>
+					<a href="#HD_edit_review_list">
+						<h3>Business Name: Happy Songs Corp</h3>
+						<p>Reviewer email: hdawoodji-cc@conestogac.on.ca</p>
+						<p>Comments: Music on Demand</p>
+						<p>Overall Rating: 100%</p>	
+					</a>
+					</li>
+				</ul>
+		</div>	
+			<footer data-role="footer" data-position="fixed" data-fullscreen="true">
+				<p align="center">
+					&copy; 2014
+				</p>
+			</footer>
+		</div>
+		
+		
+		<!-------------------Page 3 Edit for Reviews---------- -->
+		
+		<div data-role="page" id="HD_edit_review_list">
+			<header data-role="header" data-position="fixed">
+				<h1>Edit for Reviews</h1>
+			</header>
+				<div data-role="navbar">
+					<ul>
+					<li><a href="#HDhome" data-icon="home">Home</a></li>
+					<li><a href="#HDadd" data-icon="plus">Add</a></li>
+					<li><a href="#HDreview" data-icon="grid" data-theme="b" class="ui-btn-active">Reviews</a></li>
+					<li><a href="#HDsettings" data-icon="gear">Settings</a></li>
+					</ul>
+				</div>
+				<form id="form_page">
+					<label for="business_name">Business Name:</label>
+					<input type="text" name="business_name" value="Hash Software Inc"/>
+					<label for="reviewer_email">Reviewer Email:</label>
+					<input type="text" name="reviewer_email" value="hdawoodji-cc@conestogac.on.ca" />
+					<label for="reviewer_comments">Reviewer Comments:</label>
+					<input type="text" name="reviewer_comments"value="Good software" />
+					<div data-role="controlgroup" data-type="horizontal">
+					<label for="rating">Overall Rating (1-100)</label>	
+					<input type="number" class="required" pattern="[0-100]" value="2" min="1" max="100" data-mini="true" />
+						<input type="button" data-theme="e" id="cancel" name="cancel" value="Cancel" />
+						<input type="button" data-theme="a" id="delete" name="delete" value="Delete" />
+						<input type="button" data-theme="b" id="update" name="update" value="Update" />
+				</form>
+			</div>
+				<footer data-role="footer" data-position="fixed" data-fullscreen="true">
+				<p align="center">
+					&copy; 2014
+				</p>
+				</footer>
+		</div>
+		
+		
+		
+		<!-------------------Page 4 for Settings---------- -->
+		<div data-role="page" id="HDsettings">
+			<header data-role="header" data-position="fixed">
+				<h1>Settings</h1>
+			</header>
+			<div data-role="navbar">
+				<ul>
+				<li><a href="#HDhome" data-icon="home">Home</a></li>
+				<li><a href="#HDadd" data-icon="plus">Add</a></li>
+				<li><a href="#HDreview" data-icon="grid">Reviews</a></li>
+				<li><a href="#HDsettings" data-icon="gear" data-theme="b" class="ui-btn-active">Settings</a></li>
+				</ul>
+			</div>
+		<div data-role="content" >
+			
+			Default Reviewer Email:
+			<input type="text" />
+			<button data-theme="b">Save Defaults</button>
+			<button data-theme="a">Clear Database</button>
+		</div>	
+			<footer data-role="footer" data-position="fixed" data-fullscreen="true">
+				<p align="center">
+					&copy; 2014
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

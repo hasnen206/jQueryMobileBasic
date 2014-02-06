@@ -1,0 +1,14 @@
+/*
+ * Custom CSS
+ */
+img { max-width: 100%; }
+
+.red { color : red; }
+
+#cancel{color:yellow;}
+
+#delete{color: black;}
+
+#update{color:blue;}
+
+#save_button{align:left;}
